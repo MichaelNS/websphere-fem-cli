@@ -72,12 +72,12 @@ def manageFailedEvents(sourceModuleName):
         fe = msglist.get(i)
         print '******************************************************'
         print i, fe.getMsgId(), fe.getType(), '[', fe.getFailureDateTime(), ']', fe.getSourceModuleName()
-        value = raw_input("Full event information      'D'\nResubmit event              'R'\nDelete event                'S'\nSkip event                  'I'\n")
-        if ('D' == value or 'd' == value):
+        value = raw_input("Full event information      'I'\nResubmit event              'R'\nDelete event                'D'\nSkip event                  'S'\n")
+        if ('I' == value or 'i' == value):
             printFailedEventDetails(fe.getMsgId())
-            value = raw_input("Resubmit event              'R'\nDelete event                'S'\nSkip event                  'I'\n")
+            value = raw_input("Resubmit event              'R'\nDelete event                'D'\nSkip event                  'S'\n")
         if ('R' == value or 'r' == value):
             resubmitFailedEvent(fe.getMsgId())
-        if ('S' == value or 's' == value):
+        if ('D' == value or 'd' == value):
             discardFailedEvent(fe.getMsgId())
 manageFailedEvents('')
