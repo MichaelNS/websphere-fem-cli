@@ -10,9 +10,20 @@ Or you can create a .sh script with this command.
 
 After launch you will be asked for input:
 
-    1. Full event information      'D'
-    2. Resubmit event              'R'
-    3. Delete event                'S'
-    4. Skip event                  'I'
+    ******************************************************
+    147 ID:414d51204342514d2020202020202020f33dcf5450020010 JMS [ Mon Feb 16 16:13:19 MSK 2015 ] None
+    Full event information      'I'
+    Resubmit event              'R'
+    Delete event                'D'
+    Skip event                  'S'
+
+After type I:
+
+    MessageID:  A201D8E9FA97FAC5_24000017
+    FailureDateTime:  Thu Mar 19 17:14:13 MSK 2015
+    Failure Message:  com.ibm.websphere.sca.ServiceRuntimeException: com.ibm.bpe.api.RuntimeFaultException: [...]
+    Resubmit event              'R'
+    Delete event                'D'
+    Skip event                  'S'
  
 Optionally you can pass an 'sourceModuleName' parameter, to specify a module name.
