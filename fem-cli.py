@@ -66,9 +66,12 @@ def manageFailedEvents(sourceModuleName):
         msglist = getAllFailedEvents() 
     else:
         msglist = getFEListByModule(sourceModuleName)
-    i = msglist.size()
-    while (i > 0):
-        i -= 1
+
+    i = 0
+    j = msglist.size()
+    print "j=", j
+
+    while (i < j):
         fe = msglist.get(i)
         print '******************************************************'
         print i, fe.getMsgId(), fe.getType(), '[', fe.getFailureDateTime(), ']', fe.getSourceModuleName()
@@ -80,4 +83,6 @@ def manageFailedEvents(sourceModuleName):
             resubmitFailedEvent(fe.getMsgId())
         if ('D' == value or 'd' == value):
             discardFailedEvent(fe.getMsgId())
+
+        i += 1
 manageFailedEvents('')
